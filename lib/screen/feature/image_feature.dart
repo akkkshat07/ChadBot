@@ -23,7 +23,7 @@ class _ImageFeatureState extends State<ImageFeature> {
     return Scaffold(
       //app bar
       appBar: AppBar(
-        title: const Text('AI Image Creator'),
+        title: const Text('AI Image Generator'),
 
         //share btn
         actions: [

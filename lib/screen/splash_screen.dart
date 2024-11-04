@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../helper/global.dart';
 import '../helper/pref.dart';
 import '../widget/custom_loading.dart';
@@ -20,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     //wait for some time on splash & then move to next screen
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Get.off(() =>
       Pref.showOnboarding ? const OnboardingScreen() : const HomeScreen());
     });

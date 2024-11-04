@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
-import '../helper/ad_helper.dart';
 import '../helper/global.dart';
 import '../helper/pref.dart';
 import '../model/home_type.dart';
@@ -16,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // final _isDarkMode = Pref.isDarkMode.obs;
+
   final _isDarkMode = Get.isDarkMode.obs; //bug fix
 
   @override
@@ -31,8 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
     //initializing device size
     mq = MediaQuery.sizeOf(context);
 
-    //sample api call
-    // APIs.getAnswer('hii');
 
     return Scaffold(
       //app bar
@@ -57,9 +53,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   size: 26)))
         ],
       ),
-
-      //ad
-      bottomNavigationBar: AdHelper.nativeBannerAd(),
 
       //body
       body: ListView(
